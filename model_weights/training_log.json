@@ -1,0 +1,118 @@
+{
+  "seed": 42,
+  "epochs": 5,
+  "batch_size": 24,
+  "optimizer": "AdamW(wd=1e-4)",
+  "schedule": "OneCycleLR(pct_start=0.15)",
+  "max_lr": 0.0003,
+  "loss": "BCEWithLogits(pos_weight=n_real/n_fake)",
+  "pos_weight": 0.9347620606422424,
+  "augmentations": "RandomResizedCrop(0.75-1), HFlip, ColorJitter(p=.6), Grayscale(p=.05), RandomDownUp(56-200px,p=.5), GaussianBlur(sigma .1-1.6,p=.3), GaussianNoise(2-10,p=.3), RandomJPEG(q30-95,p=.6) - applied identically to both classes",
+  "manifest": "manifest_v2.csv",
+  "split_sizes": {
+    "train": 6139,
+    "val": 1242,
+    "test": 1246
+  },
+  "train_real": 2966,
+  "train_fake": 3173,
+  "hardware": "CPU only (x86_64, torch threads=2)",
+  "torch": "2.15.0+cu132",
+  "total_seconds": 2855.9,
+  "epochs_log": [
+    {
+      "epoch": 1,
+      "train_loss": 1.7284,
+      "train_acc": 0.6607,
+      "val_loss": 0.9443,
+      "val_auc": 0.8427,
+      "val_acc": 0.7568,
+      "seconds": 600.3,
+      "best": true
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.649,
+      "train_acc": 0.7921,
+      "val_loss": 0.7311,
+      "val_auc": 0.8799,
+      "val_acc": 0.7939,
+      "seconds": 541.2,
+      "best": true
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.4014,
+      "train_acc": 0.8496,
+      "val_loss": 0.5473,
+      "val_auc": 0.9281,
+      "val_acc": 0.8696,
+      "seconds": 537.6,
+      "best": true
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.2938,
+      "train_acc": 0.8811,
+      "val_loss": 0.4431,
+      "val_auc": 0.9356,
+      "val_acc": 0.8607,
+      "seconds": 565.7,
+      "best": true
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.2427,
+      "train_acc": 0.9039,
+      "val_loss": 0.4352,
+      "val_auc": 0.9393,
+      "val_acc": 0.8688,
+      "seconds": 564.5,
+      "best": true
+    }
+  ],
+  "init_weights": "timm efficientnet_b0_ra-3dd342df.pth (ImageNet-1k), sha256 3dd342dfa1fee25ae65e7bbdf8998cad6e45d6e77e69d580f0bd14d3eeb0b3f3",
+  "version": "2.1.0",
+  "stage2": {
+    "description": "fine-tuned from v2.0 with real webcam clips of team members (person-disjoint hold-out)",
+    "init": "v2.0 checkpoint",
+    "epochs": 3,
+    "lr": 0.0001,
+    "schedule": "cosine",
+    "batch_size": 24,
+    "safl_subset": 3000,
+    "team_people_train": [
+      "A",
+      "C",
+      "D"
+    ],
+    "team_holdout": "B",
+    "team_train_crops": 282,
+    "team_repeat": 3,
+    "pos_weight": 1.4249684810638428,
+    "epochs_log": [
+      {
+        "epoch": 1,
+        "train_loss": 0.3281,
+        "val_loss": 0.479,
+        "val_auc": 0.9422,
+        "seconds": 350.9
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.2303,
+        "val_loss": 0.5508,
+        "val_auc": 0.9372,
+        "seconds": 332.1
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.1965,
+        "val_loss": 0.523,
+        "val_auc": 0.9359,
+        "seconds": 320.0
+      }
+    ],
+    "seconds": 1052.8
+  }
+}

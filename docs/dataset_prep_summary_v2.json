@@ -1,0 +1,72 @@
+{
+  "videos": 416,
+  "video_frames_kept": 4155,
+  "frames_per_video_requested": 10,
+  "skipped": {
+    "no_face:deepfacelab_video": 4,
+    "no_face:celebdf_video_real": 1
+  },
+  "forced_test_videos": [
+    "AV0042",
+    "C0042"
+  ],
+  "per_split_label": {
+    "train": {
+      "real": 2966,
+      "fake": 3173
+    },
+    "val": {
+      "real": 625,
+      "fake": 617
+    },
+    "test": {
+      "real": 623,
+      "fake": 623
+    }
+  },
+  "per_split_family": {
+    "train": {
+      "celeba_real": 1481,
+      "celebdf_frame_real": 4,
+      "dfl_source_real": 2,
+      "dalle": 250,
+      "deepfacelab": 316,
+      "faceapp": 1,
+      "faceapp_on_celeba": 442,
+      "stylegan_tpdne": 747,
+      "avatarify_video": 720,
+      "deepfacelab_video": 697,
+      "celebdf_video_real": 1479
+    },
+    "val": {
+      "celeba_real": 304,
+      "celebdf_frame_real": 1,
+      "dalle": 30,
+      "deepfacelab": 68,
+      "faceapp": 1,
+      "faceapp_on_celeba": 81,
+      "stylegan_tpdne": 127,
+      "avatarify_video": 160,
+      "deepfacelab_video": 150,
+      "celebdf_video_real": 320
+    },
+    "test": {
+      "celeba_real": 302,
+      "celebdf_frame_real": 1,
+      "dalle": 30,
+      "deepfacelab": 61,
+      "faceapp": 2,
+      "faceapp_on_celeba": 86,
+      "stylegan_tpdne": 135,
+      "avatarify_video": 160,
+      "deepfacelab_video": 149,
+      "celebdf_video_real": 320
+    }
+  },
+  "videos_per_split": {
+    "test": 63,
+    "val": 63,
+    "train": 290
+  },
+  "seconds": 409.1
+}

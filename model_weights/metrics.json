@@ -1,0 +1,164 @@
+{
+  "computed_on": "held-out SAFL test split (images + 63 whole videos, group-aware; never used for training, early stopping, calibration or threshold selection)",
+  "n_test": 1246,
+  "n_test_real": 623,
+  "n_test_fake": 623,
+  "threshold": 0.4618,
+  "temperature": 2.3231,
+  "test": {
+    "threshold": 0.4618,
+    "accuracy": 0.8692,
+    "balanced_accuracy": 0.8692,
+    "precision": 0.8628,
+    "recall": 0.878,
+    "specificity": 0.8604,
+    "f1": 0.8703,
+    "roc_auc": 0.9336,
+    "pr_auc": 0.9434,
+    "confusion_matrix": {
+      "tn": 536,
+      "fp": 87,
+      "fn": 76,
+      "tp": 547
+    },
+    "confusion_matrix_note": "rows=actual (real, manipulated), cols=predicted; positive class = manipulated"
+  },
+  "ece_test_calibrated": 0.0389,
+  "per_source_family_test_accuracy": {
+    "celeba_real": {
+      "n": 302,
+      "correct": 272,
+      "label": "real",
+      "accuracy": 0.9007
+    },
+    "celebdf_frame_real": {
+      "n": 1,
+      "correct": 1,
+      "label": "real",
+      "accuracy": 1.0
+    },
+    "dalle": {
+      "n": 30,
+      "correct": 29,
+      "label": "fake",
+      "accuracy": 0.9667
+    },
+    "deepfacelab": {
+      "n": 61,
+      "correct": 53,
+      "label": "fake",
+      "accuracy": 0.8689
+    },
+    "faceapp": {
+      "n": 2,
+      "correct": 2,
+      "label": "fake",
+      "accuracy": 1.0
+    },
+    "faceapp_on_celeba": {
+      "n": 86,
+      "correct": 62,
+      "label": "fake",
+      "accuracy": 0.7209
+    },
+    "stylegan_tpdne": {
+      "n": 135,
+      "correct": 135,
+      "label": "fake",
+      "accuracy": 1.0
+    },
+    "avatarify_video": {
+      "n": 160,
+      "correct": 136,
+      "label": "fake",
+      "accuracy": 0.85
+    },
+    "deepfacelab_video": {
+      "n": 149,
+      "correct": 130,
+      "label": "fake",
+      "accuracy": 0.8725
+    },
+    "celebdf_video_real": {
+      "n": 320,
+      "correct": 263,
+      "label": "real",
+      "accuracy": 0.8219
+    }
+  },
+  "video_level_test": {
+    "n_videos": 63,
+    "threshold": 0.4618,
+    "accuracy": 0.8413,
+    "balanced_accuracy": 0.8412,
+    "precision": 0.8387,
+    "recall": 0.8387,
+    "specificity": 0.8438,
+    "f1": 0.8387,
+    "roc_auc": 0.9315,
+    "pr_auc": 0.9398,
+    "confusion_matrix": {
+      "tn": 27,
+      "fp": 5,
+      "fn": 5,
+      "tp": 26
+    },
+    "confusion_matrix_note": "rows=actual (real, manipulated), cols=predicted; positive class = manipulated",
+    "per_family": {
+      "avatarify_video": 0.8125,
+      "celebdf_video_real": 0.8438,
+      "deepfacelab_video": 0.8667
+    },
+    "aggregation": "mean of frame scores per video, deployed threshold"
+  },
+  "team_holdout": {
+    "person": "B",
+    "n_frames": 81,
+    "frames_flagged_rate": 0.0,
+    "frame_score_median": 0.0103,
+    "per_media": {
+      "WIN_20261118_18_09_18_Pro.mp4": {
+        "n": 40,
+        "mean": 0.0165,
+        "flagged": false
+      },
+      "WIN_20261118_18_09_43_Pro.mp4": {
+        "n": 40,
+        "mean": 0.0221,
+        "flagged": false
+      },
+      "WIN_20261118_18_13_40_Pro.jpg": {
+        "n": 1,
+        "mean": 0.1806,
+        "flagged": false
+      }
+    },
+    "note": "This person never appeared in training; scores use the deployed threshold."
+  },
+  "validation": {
+    "n": 1242,
+    "best_roc_auc": 0.9422,
+    "youden_j": 0.7511701782820097
+  },
+  "checkpoint_sha256": "c7d4ebfb0c1bbec4eefd21d1b4c461cd372557640fa29529c5eff51341618272",
+  "model": {
+    "model_name": "VERIFRAME-EffB0-SAFL",
+    "architecture": "efficientnet_b0 (timm 1.0.31), 1 logit",
+    "version": "2.1.0",
+    "input_size": 224,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "temperature": 2.3231,
+    "threshold": 0.4618,
+    "positive_class": "manipulated",
+    "trained_utc": "2026-11-18T13:09:26Z"
+  }
+}

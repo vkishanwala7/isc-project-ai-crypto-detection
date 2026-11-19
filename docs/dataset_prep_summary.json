@@ -1,0 +1,55 @@
+{
+  "source_images_considered": 4477,
+  "crops_kept": 4472,
+  "skipped": {
+    "no_face:celeba_real": 5
+  },
+  "multi_member_groups": 373,
+  "largest_group": 297,
+  "phash_group_distance": 8,
+  "per_split_label": {
+    "train": {
+      "real": 1487,
+      "fake": 1756
+    },
+    "val": {
+      "real": 305,
+      "fake": 307
+    },
+    "test": {
+      "real": 303,
+      "fake": 314
+    }
+  },
+  "per_split_family": {
+    "train": {
+      "celeba_real": 1481,
+      "celebdf_frame_real": 4,
+      "dfl_source_real": 2,
+      "dalle": 250,
+      "deepfacelab": 316,
+      "faceapp": 1,
+      "faceapp_on_celeba": 442,
+      "stylegan_tpdne": 747
+    },
+    "val": {
+      "celeba_real": 304,
+      "celebdf_frame_real": 1,
+      "dalle": 30,
+      "deepfacelab": 68,
+      "faceapp": 1,
+      "faceapp_on_celeba": 81,
+      "stylegan_tpdne": 127
+    },
+    "test": {
+      "celeba_real": 302,
+      "celebdf_frame_real": 1,
+      "dalle": 30,
+      "deepfacelab": 61,
+      "faceapp": 2,
+      "faceapp_on_celeba": 86,
+      "stylegan_tpdne": 135
+    }
+  },
+  "seconds": 239.5
+}

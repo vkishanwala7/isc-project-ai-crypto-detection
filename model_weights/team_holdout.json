@@ -1,0 +1,24 @@
+{
+  "person": "B",
+  "n_frames": 81,
+  "frames_flagged_rate": 0.0,
+  "frame_score_median": 0.0103,
+  "per_media": {
+    "WIN_20261118_18_09_18_Pro.mp4": {
+      "n": 40,
+      "mean": 0.0165,
+      "flagged": false
+    },
+    "WIN_20261118_18_09_43_Pro.mp4": {
+      "n": 40,
+      "mean": 0.0221,
+      "flagged": false
+    },
+    "WIN_20261118_18_13_40_Pro.jpg": {
+      "n": 1,
+      "mean": 0.1806,
+      "flagged": false
+    }
+  },
+  "note": "This person never appeared in training; scores use the deployed threshold."
+}

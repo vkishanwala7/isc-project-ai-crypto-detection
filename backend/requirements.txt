@@ -1,0 +1,21 @@
+# Tested with Python 3.13 (3.10+ supported). Pinned to versions verified in this project.
+fastapi==0.163.1
+uvicorn==0.54.0
+python-multipart
+pydantic==2.13.5
+SQLAlchemy==2.1.9
+c2pa-python==0.39.0
+cryptography==50.0.1
+Pillow==12.3.0
+numpy==2.5.3
+opencv-python-headless==5.0.0.93
+ImageHash
+timm==1.0.31
+# PyTorch: for a much smaller CPU-only install use
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+torch==2.15.0
+torchvision==0.29.2
+# facenet-pytorch is installed with --no-deps (its metadata pins old torch); see scripts/setup_backend.*
+# test
+pytest
+httpx

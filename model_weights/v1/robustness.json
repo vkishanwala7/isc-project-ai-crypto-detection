@@ -1,0 +1,85 @@
+{
+  "note": "Held-out test crops, perturbed after face cropping; fixed threshold 0.4468; no retraining.",
+  "threshold": 0.4468,
+  "n": 617,
+  "results": {
+    "none": {
+      "accuracy": 0.9611,
+      "balanced_accuracy": 0.9611,
+      "recall": 0.9586,
+      "specificity": 0.9637,
+      "roc_auc": 0.9934,
+      "confusion_matrix": {
+        "tn": 292,
+        "fp": 11,
+        "fn": 13,
+        "tp": 301
+      }
+    },
+    "jpeg_q70": {
+      "accuracy": 0.9222,
+      "balanced_accuracy": 0.9232,
+      "recall": 0.8662,
+      "specificity": 0.9802,
+      "roc_auc": 0.9828,
+      "confusion_matrix": {
+        "tn": 297,
+        "fp": 6,
+        "fn": 42,
+        "tp": 272
+      }
+    },
+    "jpeg_q40": {
+      "accuracy": 0.9076,
+      "balanced_accuracy": 0.908,
+      "recall": 0.8854,
+      "specificity": 0.9307,
+      "roc_auc": 0.9672,
+      "confusion_matrix": {
+        "tn": 282,
+        "fp": 21,
+        "fn": 36,
+        "tp": 278
+      }
+    },
+    "downscale_112": {
+      "accuracy": 0.6483,
+      "balanced_accuracy": 0.642,
+      "recall": 0.9968,
+      "specificity": 0.2871,
+      "roc_auc": 0.9181,
+      "confusion_matrix": {
+        "tn": 87,
+        "fp": 216,
+        "fn": 1,
+        "tp": 313
+      }
+    },
+    "downscale_64": {
+      "accuracy": 0.684,
+      "balanced_accuracy": 0.6798,
+      "recall": 0.914,
+      "specificity": 0.4455,
+      "roc_auc": 0.8314,
+      "confusion_matrix": {
+        "tn": 135,
+        "fp": 168,
+        "fn": 27,
+        "tp": 287
+      }
+    },
+    "blur_r1.5": {
+      "accuracy": 0.5883,
+      "balanced_accuracy": 0.581,
+      "recall": 0.9936,
+      "specificity": 0.1683,
+      "roc_auc": 0.869,
+      "confusion_matrix": {
+        "tn": 51,
+        "fp": 252,
+        "fn": 2,
+        "tp": 312
+      }
+    }
+  }
+}
